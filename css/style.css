@@ -297,6 +297,41 @@
     font-family: var(--headingfontfam);
     font-size: 20px;
   }
+  /* search input */
+  .search{
+    margin: 20px;
+  }
+  .search input{
+    border: 1.8px solid rgba(0, 0, 0, 0.422);
+    padding: 8px;
+    border-radius: 3px;
+    width: 30%;
+    @media  screen and (max-width:699px){
+      width: 60%;
+    }
+  }
+  input:focus{
+    border: 1.8px solid var(--brightblue);
+  }
+  /* not found page */
+  .empty{
+    margin: 20px;
+  }
+  .empty img{
+    width: 40%;
+    @media screen and (max-width:699px){
+      width: 60%;
+      
+    }
+  }
+  .empty p{
+    font-family: var(--bodyfontfam);
+    color: var(--darkblue);
+    margin-bottom: 5px;
+  }
+  .empty a{
+    text-align: center;
+  }
 
   /* footer */
   footer{
