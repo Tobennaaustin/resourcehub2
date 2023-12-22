@@ -331,7 +331,7 @@
   .empty p{
     font-family: var(--bodyfontfam);
     color: var(--darkblue);
-    margin-bottom: 5px;
+    margin-bottom: 18px;
   }
   .empty a{
     text-align: center;
