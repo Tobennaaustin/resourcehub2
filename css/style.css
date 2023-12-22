@@ -296,6 +296,10 @@
     color: var(--darkblue);
     font-family: var(--headingfontfam);
     font-size: 20px;
+    @media screen and (max-width:699px){
+      font-size: 18px;
+      
+    }
   }
   /* search input */
   .search{
@@ -348,8 +352,8 @@
     margin: 20px;
     padding-top: 50px;
   }
-  .foot li{
-   
+  .foot ul li a{
+   color: var(--white);
   }
   .footbtn{
     color: var(--white);
