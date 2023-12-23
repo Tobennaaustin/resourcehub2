@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <title>Card Search with Tabs</title>
+</head>
+<body>
+
+    <section>
+        <div class="warpper">
+            <!-- Your radio buttons and tabs go here -->
+            <input class="radio" id="one" name="group" type="radio" checked>
+            <input class="radio" id="two" name="group" type="radio">
+            <input class="radio" id="three" name="group" type="radio">
+            <input class="radio" id="four" name="group" type="radio">
+            <input class="radio" id="five" name="group" type="radio">
+
+            <div class="tabs">
+                <!-- Add labels for each tab -->
+                <label class="tab" id="one-tab" for="one">All</label>
+                <label class="tab" id="two-tab" for="two">100 Level</label>
+                <label class="tab" id="three-tab" for="three">200 Level</label>
+                <label class="tab" id="four-tab" for="four">300 Level</label>
+                <label class="tab" id="five-tab" for="five">400 Level</label>
+            </div>
+
+            <div class="panels">
+                <div class="search">
+                    <input type="text" placeholder="Filter...." id="searchInput" oninput="filterCards()">
+                </div>
+
+                <div class="empty" id="noResultsMessage" style="display: none;">
+                    <img src="images/undraw_not_found_re_bh2e.svg" alt="">
+                    <p>Oops, nothing to find here</p>
+                    <a href="https://forms.gle/juScgwvomiCXvERF7" class="footbtn">Submit Resource</a>
+                </div>
+
+                <!-- Add panels for each tab -->
+                <div class="panel" id="one-panel">
+                    <!-- Your card elements go here -->
+                    <!-- Example card -->
+                    <div class="column card" data-search="app development" data-level="all">
+                        <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
+                        <div class="cardcontent">
+                            <img src="images/card.svg" alt="">
+                            <div class="cardtext">
+                                <p><a href="#">Course</a></p>
+                                <h3><a href="https://www.udemy.com/share/107VjG3@vLpRC01i-nh57L2kGd3x4jgmjj-46JWpuT9k3kdJksqPm4J_ph_rCj3FDnfWCoigmA==/">App development</a></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column card" data-search="web development" data-level="all">
+                        <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
+                        <div class="cardcontent">
+                            <img src="images/card.svg" alt="">
+                            <div class="cardtext">
+                                <p><a href="#">Course</a></p>
+                                <h3><a href="https://www.udemy.com/share/107VjG3@vLpRC01i-nh57L2kGd3x4jgmjj-46JWpuT9k3kdJksqPm4J_ph_rCj3FDnfWCoigmA==/">App development</a></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column card" data-search="ass development" data-level="all">
+                        <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
+                        <div class="cardcontent">
+                            <img src="images/card.svg" alt="">
+                            <div class="cardtext">
+                                <p><a href="#">Course</a></p>
+                                <h3><a href="https://www.udemy.com/share/107VjG3@vLpRC01i-nh57L2kGd3x4jgmjj-46JWpuT9k3kdJksqPm4J_ph_rCj3FDnfWCoigmA==/">App development</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+
+                <div class="panel" id="two-panel">
+                    <!-- Your card elements go here -->
+                    <!-- Example card -->
+                    <div class="column card" data-search="app development" data-level="all">
+                        <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
+                        <div class="cardcontent">
+                            <img src="images/card.svg" alt="">
+                            <div class="cardtext">
+                                <p><a href="#">Course</a></p>
+                                <h3><a href="https://www.udemy.com/share/107VjG3@vLpRC01i-nh57L2kGd3x4jgmjj-46JWpuT9k3kdJksqPm4J_ph_rCj3FDnfWCoigmA==/">App development</a></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column card" data-search="web development" data-level="all">
+                        <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
+                        <div class="cardcontent">
+                            <img src="images/card.svg" alt="">
+                            <div class="cardtext">
+                                <p><a href="#">Course</a></p>
+                                <h3><a href="https://www.udemy.com/share/107VjG3@vLpRC01i-nh57L2kGd3x4jgmjj-46JWpuT9k3kdJksqPm4J_ph_rCj3FDnfWCoigmA==/">App development</a></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column card" data-search="ass development" data-level="all">
+                        <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
+                        <div class="cardcontent">
+                            <img src="images/card.svg" alt="">
+                            <div class="cardtext">
+                                <p><a href="#">Course</a></p>
+                                <h3><a href="https://www.udemy.com/share/107VjG3@vLpRC01i-nh57L2kGd3x4jgmjj-46JWpuT9k3kdJksqPm4J_ph_rCj3FDnfWCoigmA==/">App development</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+
+                <div class="panel" id="three-panel">
+                    <!-- Your card elements go here -->
+                    <!-- Example card -->
+                    <div class="column card" data-search="app development" data-level="all">
+                        <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
+                        <div class="cardcontent">
+                            <img src="images/card.svg" alt="">
+                            <div class="cardtext">
+                                <p><a href="#">Course</a></p>
+                                <h3><a href="https://www.udemy.com/share/107VjG3@vLpRC01i-nh57L2kGd3x4jgmjj-46JWpuT9k3kdJksqPm4J_ph_rCj3FDnfWCoigmA==/">App development</a></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column card" data-search="web development" data-level="all">
+                        <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
+                        <div class="cardcontent">
+                            <img src="images/card.svg" alt="">
+                            <div class="cardtext">
+                                <p><a href="#">Course</a></p>
+                                <h3><a href="https://www.udemy.com/share/107VjG3@vLpRC01i-nh57L2kGd3x4jgmjj-46JWpuT9k3kdJksqPm4J_ph_rCj3FDnfWCoigmA==/">App development</a></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column card" data-search="ass development" data-level="all">
+                        <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
+                        <div class="cardcontent">
+                            <img src="images/card.svg" alt="">
+                            <div class="cardtext">
+                                <p><a href="#">Course</a></p>
+                                <h3><a href="https://www.udemy.com/share/107VjG3@vLpRC01i-nh57L2kGd3x4jgmjj-46JWpuT9k3kdJksqPm4J_ph_rCj3FDnfWCoigmA==/">App development</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more cards as needed -->
+                </div>
+
+                <!-- Repeat the above structure for other tabs -->
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function filterCards() {
+            var input, filter, cards, card, txtValue, levelFilter, noResultsMessage;
+            input = document.getElementById('searchInput');
+            filter = input.value.toLowerCase();
+            cards = document.getElementsByClassName('card');
+            noResultsMessage = document.getElementById('noResultsMessage');
+
+            var found = false;
+
+            for (var i = 0; i < cards.length; i++) {
+                card = cards[i];
+                txtValue = card.getAttribute('data-search').toLowerCase();
+                levelFilter = card.getAttribute('data-level').toLowerCase();
+
+                if ((txtValue.indexOf(filter) > -1 || filter === '') && (levelFilter === 'all' || levelFilter === getCurrentTab())) {
+                    card.style.display = '';
+                    found = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+
+            // Display a message if no results are found
+            if (noResultsMessage) {
+                noResultsMessage.style.display = found ? 'none' : '';
+            }
+        }
+
+        function getCurrentTab() {
+            var tabs = document.querySelectorAll('.radio');
+            for (var i = 0; i < tabs.length; i++) {
+                if (tabs[i].checked) {
+                    return tabs[i].id.replace('-tab', '');
+                }
+            }
+            return 'all';
+        }
+    </script>
+
+</body>
+</html>
