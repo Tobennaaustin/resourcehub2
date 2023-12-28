@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Anek Telugu');
 @import url('https://fonts.googleapis.com/css?family=Candal');
+@import url('responsive.css ');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 *,
 *:after,
@@ -209,6 +210,10 @@
     @media screen and (max-width:699px) {
       font-size: 25px;
       max-width: 70%;
+    }
+    @media screen and (max-width:445px) {
+      font-size:20px ;
+      max-width:40% ;
       
     }
   }
@@ -245,12 +250,17 @@
     }
   }
   
-  .row {margin: 0 -5px;}
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  .row {
+    margin: 0 -5px;
+    grid-template-columns: auto auto auto ;
+    display: grid;
   }
+  /* .row:after {
+    content: "";
+    
+    clear: both;
+    
+  } */
  
   .card {
     /* padding: 10px; */
@@ -258,7 +268,6 @@
     /* width: 100%;
     height: 200px; */
     margin-top: 0;
- 
     border: 1px solid rgba(0, 0, 0, 0.151);
     border-radius: 5px;
     cursor: pointer;
