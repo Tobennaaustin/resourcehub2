@@ -235,7 +235,7 @@
 
   }
   /* style for the cards */
-  .column {
+  /* .column {
     float: left;
     width: 25%;
     padding:20px;
@@ -248,7 +248,7 @@
       margin-bottom: 20px;
       
     }
-  }
+  } */
   
   .row {
     margin: 0 -5px;
