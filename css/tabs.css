@@ -40,7 +40,6 @@
     box-shadow: 0 0.5rem 0.8rem #00000080;
     font-family: var(--bodyfontfam);
   }
-  
   .panels {
     min-height: 200px;
     overflow: hidden;
