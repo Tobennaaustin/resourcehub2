@@ -370,11 +370,11 @@
     color: var(--white);
     font-family: var(--bodyfontfam);
   }
-  footer:after {
+  /* footer:after {
     content: "";
     display: table;
     clear: both;
-  }
+  } */
   .foot{
     margin: 20px;
     padding-top: 50px;
