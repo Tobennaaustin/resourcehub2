@@ -17,6 +17,9 @@
     main{
         margin-top: 19%;
     }
+    .acc{
+        display: none;
+    }
 }
 @media screen and (max-width:450px){
     .row{
