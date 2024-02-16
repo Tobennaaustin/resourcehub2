@@ -85,10 +85,8 @@
     display: block;
   }
   .button.secondary {
-    /* divider between buttons and menu links */
     border-bottom: 1px var(--brightblue) solid;
   }
-  /* Submenu up from mobile screens */
   .submenu {
     display: none;
   }
@@ -126,7 +124,6 @@
 
   }
   
-  /* Tablet menu */
   @media all and (min-width: 700px) {
     .menu {
       justify-content: center;
@@ -144,7 +141,7 @@
       text-align: right;
       order: 2;
     }
-    /* Button up from tablet screen */
+
     .menu li.button a {
       padding: 5px;
       margin: 5px 0;
@@ -161,7 +158,7 @@
       text-decoration: none;
     }
   }
-  /* Desktop menu */
+
   @media all and (min-width: 960px) {
     .menu {
       align-items: flex-start;

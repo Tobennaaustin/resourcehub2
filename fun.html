@@ -3,105 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    /* .row{
-      grid-template-columns: repeat(auto-fill, minmax(calc(33.3333% - 20px), 1fr));
-    }
-    .row .card {
-        border: 1px solid var(--lightblack);
-        margin-top: 0;
-        border: 1px solid rgba(0, 0, 0, 0.151);
-        border-radius: 2px;
-        cursor: pointer;
-        height: 200px;
-      } */
-
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      grid-template-rows: repeat(2, auto);
-      gap: 20px;
-      margin: 20px;
-    }
-
-    .card {
-        border: 1px solid var(--lightblack);
-    /* width: 100%;
-    height: 200px; */
-    margin-top: 0;
-    border: 1px solid rgba(0, 0, 0, 0.151);
-    border-radius: 5px;
-    cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-    }
-    .card img{
-    width: 30%;
-  }
-  .cardcontent{
-    margin: 10px;
-  }
-  .cardtext i{
-    float: right;
-    margin-top: 0;
-    width: 10px;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-
-    /* @media screen and (max-width: 1200px) {
-      .card-container {
-        grid-template-columns: repeat(auto-fill, minmax(calc(33.3333% - 20px), 1fr));
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      .card-container {
-        grid-template-columns: repeat(auto-fill, minmax(calc(100% - 20px), 1fr));
-      }
-    } */
-  </style>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/fun.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
+  <!-- <a href="" class="account"><i class="fa fa-person"></i></a> -->
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html">ResourceHub</a>
+    </div>
 
-<div class="card-container">
-  <div class="card" style="grid-column: 1 / span 1;">
-    <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
-                <div class="cardcontent">
-                    <img src="images/card.svg" alt="">
-                    <div class="cardtext">
-                        <p><a href="#">Course</a></p>
-                        <h3><a href="https://www.udemy.com/share/101GDi3@KvIqFEoX43HqkAfVAH1ZIWU6KVSxb5_SSIPI9O2la6pZ5oNsQPKTQsH0nDjzdGJbtA==/">Wordpress</a></h3>
-                    </div>
-                </div>
-  </div>
+    <div class="nav-links">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">All</a></li>
+        <li><a href="">Past-Questions</a></li>
+        <li><a href="">Articles</a></li>
+        <li><a href="">Courses</a></li>
+      </ul>
+    </div>
 
-  <div class="card" style="grid-column: 2 / span 3; grid-row: span 2;">
-    <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
-                <div class="cardcontent">
-                    <img src="images/card.svg" alt="">
-                    <div class="cardtext">
-                        <p><a href="#">Course</a></p>
-                        <h3><a href="https://www.udemy.com/share/101GDi3@KvIqFEoX43HqkAfVAH1ZIWU6KVSxb5_SSIPI9O2la6pZ5oNsQPKTQsH0nDjzdGJbtA==/">Wordpress</a></h3>
-                    </div>
-                </div>
-  </div>
-  <div class="card" style="grid-column: 1;">
-    <p style="background-color: #381fd1; color: white; padding: 5px; float: right; margin-top: 0; border-top-right-radius: 10px;">NEW</p>
-                <div class="cardcontent">
-                    <img src="images/card.svg" alt="">
-                    <div class="cardtext">
-                        <p><a href="#">Course</a></p>
-                        <h3><a href="https://www.udemy.com/share/101GDi3@KvIqFEoX43HqkAfVAH1ZIWU6KVSxb5_SSIPI9O2la6pZ5oNsQPKTQsH0nDjzdGJbtA==/">Wordpress</a></h3>
-                    </div>
-                </div>
-  </div>
-</div>
+    <div class="nav-btn">
+      <a href="">Submit Resource</a>
+    </div>
 
+    <span class="btn" id="open">
+      <i class="fa fa-bars"></i>
+    </span>
+  </nav>
+  <aside>
+    <button id="close"><i class="fa fa-times"></i></button>
+    <div class="nav-links2">
+      <ul>
+        <div class="sublink">
+          <img src="images/IMG-20231204-WA0069.jpg" alt="">
+          <span>Account</span>
+        </div>
+        <hr>
+        <li><a href="">Home</a></li>
+        <li><a href="">All</a></li>
+        <li><a href="">Past-Questions</a></li>
+        <li><a href="">Articles</a></li>
+        <li><a href="">Courses</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="nav-btn2">
+      <a href="">Submit Resource</a>
+    </div>
+
+    <div class="acc">
+
+    </div>
+  </aside>
+
+  <script>
+    const open = document.getElementById("open");
+    const close = document.getElementById("close");
+    const aside = document.querySelector("aside");
+
+    open.addEventListener('click', () => {
+      aside.style.display = "block";
+      aside.style.transition = ".10s ease"
+    });
+    close.addEventListener('click', () => {
+      aside.style.display = "none";
+    });
+
+    if(window.screen.width < 799){
+      aside.style.display = "none"
+    }
+  </script>
 </body>
 </html>
