@@ -26,182 +26,127 @@
     -webkit-text-size-adjust:100%;
     font-feature-settings:normal;
   }
-  nav {
-    background: var(--creame);
-    padding: 0 15px;
-  }
   a {
     color: var(--brightblue);
   }
-  .menu,
-  .submenu {
-    list-style-type: none;
-  }
-  .logo {
-    font-size: 20px;
-    font-family: var(--headingfontfam);
-    padding: 7.5px 10px 7.5px 0;
-  }
-  .item {
-    padding: 10px;
-    font-family: var(--bodyfontfam);
-    font-weight: 600;
-  }
-  .item.button {
-    padding: 9px 5px;
-  }
-  .item:not(.button) a:hover,
-  .item a:hover::after {
-    color: var(--brightblue);
-  }
-  /* Mobile menu */
-  .menu {
+  nav{
+    position: fixed;
+    top: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
-  }
-  .menu li a {
-    display: block;
-    padding: 15px 5px;
-  }
-  .menu li.subitem a {
-    padding: 15px;
-  }
-  .toggle {
-    order: 1;
-    font-size: 20px;
-  }
-  .item.button {
-    order: 2;
-  }
-  .item {
-    order: 3;
+    justify-content: space-between;
+    padding: 10px;
+    background: var(--creame);
     width: 100%;
-    text-align: center;
+   
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    padding: 10px;
+}
+.nav-logo a{
+    color: var(--darkblue);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--headingfontfam);
+}
+.nav-links a{
+    color: var(--darkblue);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: var(--bodyfontfam);
+}
+.nav-btn a{
+    color:var(--white) ;
+    background-color:var(--darkblue);
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    align-items: center;
+    font-family: var(--bodyfontfam);
+}
+.btn{
     display: none;
-  }
-  .active .item {
-    display: block;
-  }
-  .button.secondary {
-    border-bottom: 1px var(--brightblue) solid;
-  }
-  .submenu {
+}
+aside{
     display: none;
-  }
-  .submenu-active .submenu {
-    display: block;
-  }
-  .has-submenu i {
-    font-size: 12px;
-  }
-  .has-submenu > a::after {
-    font-family: "Font Awesome 5 Free";
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 900;
-    content: "\f078";
-    color: var(--brightblue);
-    padding-left: 5px;
-  }
-  .subitem a {
-    padding: 10px 15px;
-  }
-  .submenu-active {
-    background-color:var(--creame);
-    border-radius: 3px;
-  }
-  @media  screen and (max-width:699px){
-    .button.secondary a {
-        border: 2px solid var(--brightblue);
-        color: var(--brightblue);
-        border-radius: 5px;
-      }
-      .button a:hover {
-        text-decoration: none;
-      }
-
-  }
-  
-  @media all and (min-width: 700px) {
-    .menu {
-      justify-content: center;
-    }
-    .logo {
-      flex: 1;
-    }
-    .item.button {
-      width: auto;
-      order: 1;
-      display: block;
-    }
-    .toggle {
-      flex: 1;
-      text-align: right;
-      order: 2;
-    }
-
-    .menu li.button a {
-      padding: 5px;
-      margin: 5px 0;
-    }
-    .button.secondary {
-      border: 0;
-    }
-    .button.secondary a {
-      background: var(--brightblue);
-      color: var(--white);
-      border-radius: 5px;
-    }
-    .button a:hover {
-      text-decoration: none;
-    }
-  }
-
-  @media all and (min-width: 960px) {
-    .menu {
-      align-items: flex-start;
-      flex-wrap: nowrap;
-      background: none;
-    }
-    .logo {
-      order: 0;
-    }
-    .item {
-      order: 1;
-      position: relative;
-      display: block;
-      width: auto;
-    }
-    .button {
-      order: 2;
-    }
-    .submenu-active .submenu {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 68px;
-      background: var(--creame);
-    }
-    .toggle {
-      display: none;
-    }
-    .submenu-active {
-      border-radius: 0;
-    }
-    
-  }
-
-  /* main{
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-template-rows: repeat(1, auto);
-    margin: 30px;
-    gap: 20px;
-  } */
+    background-color: blue;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding: 10px;
+}
+aside button{
+    position: absolute;
+    right: 5px;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+.nav-links2{
+    margin-top: 50px;
+    padding: 10px;
+    line-height: 50px;
+}
+.nav-links2>ul{
+    margin-top: 10px;
+}
+.nav-links2 ul li a{
+    color: white;
+    font-size: 15px;
+}
+.sublink{
+    display: flex;
+    align-items: center;
+}
+.sublink span{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+.sublink img{
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.nav-btn2 a{
+    color: blue;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.acc{
+    background-color: blue;
+    color: white;
+    /* padding: 10px; */
+    top: 60%;
+    right: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    box-shadow: 2px 1px 1px 1px blue;
+}
 
 
+main{
+  margin-top: 10%;
+}
   .con2{
     grid-column: 1 /span 5;
     grid-row: auto;

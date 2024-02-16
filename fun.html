@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
-  <!-- <a href="" class="account"><i class="fa fa-person"></i></a> -->
+  <span class="acc"><i class="fa fa-user" aria-hidden="true"></i></span>
   <nav>
     <div class="nav-logo">
       <a href="index.html">ResourceHub</a>
@@ -35,12 +35,12 @@
   <aside>
     <button id="close"><i class="fa fa-times"></i></button>
     <div class="nav-links2">
+      <div class="sublink">
+        <img src="images/IMG-20231204-WA0069.jpg" alt="">
+        <span>Account</span>
+      </div>
+      <hr>
       <ul>
-        <div class="sublink">
-          <img src="images/IMG-20231204-WA0069.jpg" alt="">
-          <span>Account</span>
-        </div>
-        <hr>
         <li><a href="">Home</a></li>
         <li><a href="">All</a></li>
         <li><a href="">Past-Questions</a></li>
@@ -65,11 +65,15 @@
     const aside = document.querySelector("aside");
 
     open.addEventListener('click', () => {
+      // aside.style.width ="70%";
       aside.style.display = "block";
       aside.style.transition = ".10s ease"
+  
     });
     close.addEventListener('click', () => {
+      // aside.style.width = "0"
       aside.style.display = "none";
+      
     });
 
     if(window.screen.width < 799){

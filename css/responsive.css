@@ -2,6 +2,21 @@
     .row{
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+    .btn{
+        display: block;
+        color: #11284b;
+        padding: 8px;
+        cursor: pointer;
+    }
+    .nav-links{
+        display: none;
+    }
+    .nav-btn{
+        display: none;
+    }
+    main{
+        margin-top: 19%;
+    }
 }
 @media screen and (max-width:450px){
     .row{
