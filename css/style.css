@@ -97,7 +97,7 @@ aside button{
     cursor: pointer;
 }
 .nav-links2{
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 10px;
     line-height: 50px;
     font-family: var(--bodyfontfam);
@@ -113,10 +113,12 @@ aside button{
 .sublink{
     display: flex;
     align-items: center;
+    
 }
 .sublink span{
     color: var(--darkblue);
     font-size: 15px;
+    cursor: pointer;
     font-weight: 500;
 }
 .sublink img{
